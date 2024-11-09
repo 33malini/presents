@@ -1,0 +1,108 @@
+.wmodal {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgb(230, 219, 213, .2);
+}
+
+.modal-window {
+    width: 390px;
+    background: rgb(204, 195, 150);
+    border-radius: 6px;
+    margin: 80px 190px;
+    font-style: normal;
+    
+}
+.modal-header {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.modal-title {
+    font-size: 23px;
+    font-weight: 900;
+}
+.modal-close {
+    cursor: pointer;
+}
+.modal-body {
+    padding: 10px;
+}
+.modal-footer {
+    padding: 5px 10px;
+}
+.header-after {
+    display: flex;
+    font-size: 21px;
+}
+.header-after-right {
+    font-weight: normal;
+}
+.time-variant {
+    margin-top: 10px;
+    min-height: 20px;
+    font-size: 19px;
+}
+.el-radio_input {
+    width: 20px;
+    height: 20px;
+    background: rgb(204, 195, 150);
+    border-radius: 50%;
+    border: 1px solid;
+} 
+.el-radio_input:hover {
+    background: rgb(22, 133, 65);
+}
+.medium input[type=radio] {
+    display: inline-block;
+}
+
+.yes_radio {
+    display: block;
+    text-align: left;
+}
+.el-radio_label {
+    margin-left: 10px;
+}
+.form-group {
+    display: none;
+}
+
+
+.delivery {
+    min-width: 320px;
+    min-height: 41px;
+    display: inline-block;
+    margin-top: 11px;
+    background: rgb(204, 195, 150);
+    border-radius: 5px;
+    border: solid 2px rgb(22, 133, 65);
+    padding-left: 23px;
+    outline: none;
+}
+.delivery::placeholder {
+    color: rgb(22, 133, 65);
+    font-size: 16px;
+}
+
+
+
+
+
+.btn {
+    display: inline-block;
+    background: rgb(22, 133, 65);
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 12px;
+    min-width: 350px;
+    min-height: 43px;
+    font-size: 21px;
+    color: rgb(239, 247, 244);
+}

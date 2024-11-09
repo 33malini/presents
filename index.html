@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>33malini</title>
+      <link type="image/png" sizes="16x16" rel="icon" href=".../icons8-малина-3d-fluency-16.png">
+      <link rel="stylesheet" href="style/style.css">
+      <link rel="stylesheet" href="style/modal.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"
+                 integrity="sha512-f0tzWhCwVFS3WeYaofoLWkTP62ObhewQ1EZn65oSYDZUg1+CyywGKkWzm8BxaJj5HGKI72PnMH9jYyIFz+GH7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" 
+                   integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+        <body>
+              <header>
+                <div class="heading-menu" id="menu">
+                  <div class="menu">
+                    
+                    <div class="time">
+                      <h class="box-menu" id="boxtime">Выбрать дату доставки</h>
+                      <button type="button" name="popup-button" class="icon-btn">
+                        <div class="going-image"></div>
+                      </button>
+                    </div> 
+                    <div class="adress">
+                      <h class="box-menu" id="boxaddress">Указать адрес доставки</h>
+                      <button type="button" name="popup-button" class="icon-btn">
+                        <div class="going-image"></div>
+                      </button>
+                    </div>
+                    <div class="wmodal" id="">
+                      <div class="modal-overlay">
+                        <div class="modal-window">
+                          <div class="modal-header">
+                            <span class="modal-title">Выберите дату доставки</span>
+                            <span class="modal-close">&times;</span>
+                          </div>
+                          <div class="modal-body">
+                            <div class="header-after">
+                              <div class="header-after-left">Желаемое время доставки:</div>
+                              <div class="header-after-right">Часовой пояс: Иркутск</div>
+                            </div>
+                            <div role="radiogroup" id="radiogroup" class="yes_radio">
+                              <div class="time-variant">
+                                <label role="radio" class="el-radio radio medium">
+                                  <span class="el-radio_input" id="el_1">
+                                    <input type="radio" name="question" class="yes">
+                                  </span>
+                                  <span class="el-radio_label">Как можно скорее</span>
+                                </label>
+                              </div>
+                              <div class="time-variant">
+                                <label role="radio" class="el-radio radio medium">
+                                  <span class="el-radio_input" id="el_2">
+                                    <input type="radio" name="question" class="yes" id="timet">
+                                  </span>
+                                  <span class="el-c">Ко времени</span>
+                                </label>
+                              </div>
+                              <div class="time-variant">
+                                <label role="radio" class="el-radio radio medium">
+                                  <span class="el-radio_input" id="el_3">
+                                    <input type="radio" name="question" class="yes" id="accuracy">
+                                  </span>
+                                  <span class="el-radio_label" >Узнаем у получателя</span>
+                                </label>
+                              </div>
+                            </div>
+                              <div class="form-group" id="field_delivery">
+                                <input id="datetimepicker" type="text" class="delivery" readonly="readonly" name="date"
+                                placeholder="Дата и время доставки заказа">
+                              </div>
+                              
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn" id="btn_date">Сохранить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="logotip">
+                      <img src="./img/надпись.png" class="logo">
+                    </div>
+                    <div class="product">
+                    
+                    <div class="search">
+                      <input type="text" class="search-txt" name="name" placeholder="Поиск">
+                      <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </div> 
+                    
+                    </div>    
+                </div>
+                  <div class="menu-logo"></div>
+                  <div class="menu-button" id="btn-menu">
+                    <img class="btn-img" id="btn_img" src="../33MALINI/icons/free-icon-menu-4254068.png">
+                  </div>
+                </div>
+                  
+            </header>
+              <div class="mount">
+                <div class="information">
+                  <div class="categories">
+                    <ul class="list">
+                      <li><span class="bg-img"></span><p class="text-li">Мужские</p></li>
+                      <li><span class="bg-img"></span><p class="text-li">Женские</p></li>
+                      <li><span class="bg-img"></span><p class="text-li">Детские</p></li>
+                      <li><span class="bg-img"></span><p class="text-li">Повод</p></li>
+                      <li><span class="bg-img"></span><p class="text-li">Кому</p></li>
+                      <li><span class="bg-img"></span><p class="text-li">Акции</p></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="container-scroll">
+                  <div class="categories-block">
+                      <div class="sections">
+                        <div class="card" id="choco-bar">
+                          <h1>Клубника в шоколаде</h1>
+                        </div>
+                        <div class="card" id="choco">
+                          <h1>Букеты из конфет</h1>
+                        </div>
+                      </div>
+                      <div class="sections">
+                        <div class="card-fruits" id="fruits">
+                          <h1>Сладкие букеты</h1>
+                        </div>
+                        <div class="card-fruits" id="berries">
+                          <h1>Букеты из фруктов</h1>
+                        </div>
+                        <div class="card-fruits" id="berry">
+                          <h1>Ягодные букеты</h1>
+                        </div>
+                      </div>
+                      <div class="sections">
+                        <div class="card" id="nuts">
+                          <h1>Орехи и сухофрукты</h1>
+                        </div>
+                        <div class="card" id="set">
+                          <h1>Наборы и боксы</h1>
+                        </div>
+                      </div>
+                      
+                  </div>
+                    <div class="info-block">
+                      <div class="recommendations">
+                        <div class="reviews-block"><h2>Отзывы</h2></div>
+                        <div class="reviews-block"><h2>Рекомендации</h2></div>
+                        <div class="reviews-block"><h2>Советы</h2></div>
+                      </div>
+                    </div>
+                    <div class="master">
+                      <div class="box-master"></div>
+                  </div>
+                </div>
+   
+                <div class="info-conteiner">
+                  <nav class="menu-bar">
+                      <ul class="bar-conteiner">
+                        <li class="menu-item"><a href="#">Сырные</a></li>
+                        <li class="menu-item"><a href="#">С шоколадными розами</a></li>
+                        <li class="menu-item"><a href="#">Колбасные</a></li>
+                        <li class="menu-item"><a href="#">Фрукты в шоколаде</a></li>
+                        <li class="menu-item"><a href="#">Торты</a></li>
+                        <li class="menu-item"><a href="#">Цветочные композиции</a></li>
+                        <li class="menu-item"><a href="#">Овощные</a></li>
+                        <li class="menu-item"><a href="#">С зефирными розами</a></li>
+                        <li class="menu-item"><a href="#">Шоколад</a></li>
+                        <li class="menu-item"><a href="#">Фигурки из мастики</a></li>
+                        <li class="menu-item"><a href="#">Капкейки</a></li>
+                        <li class="menu-item"><a href="#">С макарунами</a></li>
+                      </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="footer">
+                <div class="logo2">
+                  <div class="tip_logo">
+                    <img src="./img/надпись.png" class="logo_footer">
+                  </div>
+                  <div class="social">
+                    <a href="https://t.me/olya_33malini" target="_blank">
+                      <img src="../33MALINI/icons/free-icon-telegram-2111646.png" alt="Телеграмм" class="icons" />
+                    </a>
+                    <a href="https://vk.com/33malini" target="_blank">
+                      <img src="../33MALINI/icons/vk.png" alt="ВКонтакте" class="icons" />
+                    </a>
+                  </div>
+                </div>
+                <div class="certificate">
+                  <a href="#" target="_blank">Подарочные сертификаты</a>
+                </div>
+                <div class="corporate">
+                  <a href="#" target="_blank">Корпоративным клиентам</a>
+                </div>
+                <div class="partner">
+                  <a href="#" target="_blank">Партнерская программа</a>
+                </div>
+                
+                <div class="letter">
+                  <a href="#" target="_blank">Обатная связь</a>
+                </div>
+              </div>  
+              <script src="script.js/JS.script.js"></script>
+          </body>
+          
+</html>
