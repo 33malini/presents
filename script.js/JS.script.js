@@ -1,7 +1,7 @@
 let box_menu = document.getElementById('boxtime'),
     icon = document.getElementsByTagName('button')[0],
     modal = document.querySelector('.wmodal'),
-    close = document.querySelector('.modal-close'),
+    clos = document.querySelector('.modal-close'),
     overlay = document.querySelector('.modal-overlay'),
     modalWindow = document.querySelector('.modal-window');
     el1 = document.querySelector('#el_1');
@@ -11,24 +11,20 @@ let box_menu = document.getElementById('boxtime'),
     dattimpicker = document.querySelector('#datetimepicker');
     btndate = document.querySelector('#btn_date');
     input = document.getElementById('#datetimepicker');
-    menu = document.querySelector('#menu');
-    btn_menu = document.querySelector('#btn-menu');
-    btn_image = document.querySelector('#btn_img')
-
-
+    menu_heading = document.querySelector('.heading-menu');
+    btn_menu = document.querySelector('.menu-button');
+    btn_image = document.querySelector('.btn-img')
 
 
 
 btn_menu.onclick = () => {
-  if (menu.classList.toggle('open')) {
+  if (menu_heading.classList.toggle('open')) {
       btn_image.src = './icons/free-icon-close-page-8487257.png';
-  } else {
+  } 
+  else {
       btn_image.srs = './icons/free-icon-menu-4254068.png';
   }
 } 
-
-
-
 
 
 
@@ -43,7 +39,7 @@ icon.addEventListener('click', function() {
     modal.style.display = 'block';
 });
 
-close.addEventListener('click', function() {
+clos.addEventListener('click', function() {
     modal.style.display = 'none';
 });
 

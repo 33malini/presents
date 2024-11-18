@@ -1,7 +1,7 @@
 .wmodal {
     display: none;
+    z-index: 3;
 }
-
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -10,14 +10,12 @@
     bottom: 0;
     background: rgb(230, 219, 213, .2);
 }
-
 .modal-window {
     width: 390px;
     background: rgb(204, 195, 150);
     border-radius: 6px;
-    margin: 80px 190px;
-    font-style: normal;
-    
+    margin: 71px;
+    font-style: normal; 
 }
 .modal-header {
     padding: 5px 10px;
@@ -36,6 +34,7 @@
 }
 .modal-footer {
     padding: 5px 10px;
+    text-align: center;
 }
 .header-after {
     display: flex;
@@ -73,10 +72,8 @@
 .form-group {
     display: none;
 }
-
-
 .delivery {
-    min-width: 320px;
+    width: 80%;
     min-height: 41px;
     display: inline-block;
     margin-top: 11px;
@@ -91,10 +88,6 @@
     font-size: 16px;
 }
 
-
-
-
-
 .btn {
     display: inline-block;
     background: rgb(22, 133, 65);
@@ -105,4 +98,39 @@
     min-height: 43px;
     font-size: 21px;
     color: rgb(239, 247, 244);
+}
+
+
+
+
+
+@media (min-width: 320px)
+and (max-width: 559px) {
+    .modal-window {
+        width: auto;
+    }
+    .header-after {
+        font-size: 19px;
+    }
+    .el-radio_label {
+        margin-left: 5px;
+        word-spacing: 2px;
+        font-size: 17px;
+    } 
+    .form-group {
+        text-align: center;
+    } 
+    .delivery {
+        padding-left: 9px;
+    }
+    .delivery::placeholder {
+        font-size: 14px;
+        white-space: pre-line;
+    }
+    .modal-footer {
+        text-align: center;
+    }
+    .btn {
+        min-width: 159px;
+    }
 }

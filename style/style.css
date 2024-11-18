@@ -37,7 +37,7 @@ header {
 }
 
 .time, .adress, .product {
-    width: 327px;
+    min-width: 327px;
     position: relative;
 } 
 
@@ -86,7 +86,7 @@ header {
     background-size: contain;    
     cursor: pointer;
 }
-
+.
 
 .logotip {
     width: 250px;
@@ -122,7 +122,8 @@ header {
     display: none;
     width: 42px;
     height: 42px;
-    
+    background-color: rgb(230, 219, 213);
+    border: none;
 }
 .btn-img {
     width: 100%;
@@ -587,9 +588,11 @@ header {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
     .time, .adress {
         height: 46px;
+        width: 299px;
         margin: 0 5px;
     }
     .icon-btn {
@@ -740,7 +743,8 @@ header {
     .heading-menu.open .menu {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: flex-start;
+        row-gap: 29px;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -748,7 +752,7 @@ header {
         right: 0;
         background-color: rgb(230, 219, 213);
         z-index: 1;
-        padding: 29px 13px 233px;
+        padding: 55px 13px 233px;
     }
     .menu {
         display: none;
@@ -756,6 +760,11 @@ header {
     .time, .adress, .product {
         font-size: 21px;
         width: 297px;
+        height: 59px;
+    }
+    .icon-btn {
+        right: 14px;
+        bottom: 4px;
     }
     .menu-logo {
         display: block;
@@ -765,8 +774,8 @@ header {
         margin: auto 0;
         position: fixed;
         z-index: 3;
-        top: 5px;
-        right: 9px;
+        top: 9px;
+        right: 11px;
     }
     .mount {
         justify-content: space-evenly;
@@ -823,9 +832,49 @@ header {
         vertical-align: middle;
         white-space: nowrap;
     }
-    
+    .footer{
+        height: 17%;
+    }
     .certificate, .corporate, .partner, .letter {
         display: none;
+    }
+  }
+
+
+  @media (max-width: 319px) {
+    header, .mount, .certificate, 
+    .corporate, .partner, .letter,
+    .logotip {
+        display: none;
+    }
+    .footer {
+        height: 45%;
+        margin-bottom: 20px;
+    }
+    .logo2 {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 90%;
+    }
+    .tip_logo {
+        position: absolute;
+        width: 90%;
+        height: 53%;
+    }
+    .logo_footer {
+        width: 100%;
+        height: 100%;
+    }
+    .social {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 45%;
+        letter-spacing: 21px;
+    }
+    .icons {
+        width: 45px;
     }
   }
 
@@ -834,12 +883,20 @@ header {
    and (max-height: 768px) {
     .menu {
         row-gap: 6px;
+        font-size: 21px;
+        padding: 0;
     }
     .time, .adress, .logotip, .product {
-        height: 32px;
+        height: 36px;
     }
-    .search-txt, .logo {
-        height: 31px;
+    .icon-btn {
+        width: 19px;
+        height: 19px;
+        right: 24px;
+        bottom: 13px;
+    }
+    .search-txt {
+        height: 38px;
     }
     .information {
         width: 45%;
@@ -848,9 +905,6 @@ header {
         height: 53%;
         width: 70%;
         padding: 6px;
-    }
-    .list {
-       
     }
     .list li {
         max-height: 32px;
@@ -870,6 +924,7 @@ header {
     }
     .info-conteiner {
         width: 50%;
+        margin-top: 20px;
     }
     .menu-bar {
         margin: 0 7px;
@@ -881,11 +936,16 @@ header {
     .footer {
         padding: 0;
     }
+    .logo {
+        height: 36px;
+    }
    }   
   
+
    @media (max-height: 599px) {
     header {
         max-width: 100%;
+        max-height: 30%;
         margin: 0;
     }
     .heading-menu {
@@ -896,15 +956,25 @@ header {
         height: 100%;
         justify-content: space-between;
         row-gap: 6px;
+        padding: 0 9px;
     }
     .menu-logo {
         width: 176px;
         height: 43px;
     }
-    
+    .menu-button {
+        width: 34px;
+        height: 34px;
+    }
     .time, .adress, .logotip, .product {
-        max-height: 34px;
-        max-width: 262px;
+        max-height: 49px;
+        width: 259px;
+    }
+    .icon-btn {
+        width: 19px;
+        height: 19px;
+        right: 0;
+        bottom: 12px;
     }
     .box-menu {
         font-size: 21px;
@@ -913,25 +983,17 @@ header {
     .search-txt {
         height: 34px;
     }
-    .product, .logotip {
-        margin: 0;
-    }
-    .logo {
-        height: 100%;
-    }
-    .heading-menu.open .menu {
-        
-    }
     .information, .container-scroll {
         display: none;
     }
     .mount {
         max-width: 85%;
-        height: 67%;
+        height: 52%;
     }
     .info-conteiner {
         width: 100%;
         margin: 0;
+        padding-top: 10px;
     }
     .bar-conteiner {
         flex-direction: row;
@@ -941,7 +1003,7 @@ header {
         padding: 0;
     }
     .menu-bar {
-        width: 100%;
+        width: 95%;
         max-height: 100%;
     }
     .menu-item {
@@ -951,18 +1013,19 @@ header {
         margin-bottom: 0;
     }
     .footer {
-        height: 16%;
+        max-height: 45%;
     }
 
     .footer a {
         vertical-align: text-bottom;
     }
+    .logo {
+        height: 100%;
+    }
     .social {
         padding: 5px;
     }
-    .tip_logo {
-        display: none;
-    }
+    
     footer a {
         font-size: 16px;
     }
@@ -973,6 +1036,12 @@ header {
 
 }
 
+
+@media (max-height: 320px) {
+    .footer {
+        height: 45%;
+    }
+}
 
  
  
