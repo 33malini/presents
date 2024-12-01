@@ -37,7 +37,7 @@ header {
 }
 
 .time, .adress, .product {
-    min-width: 327px;
+    width: 327px;
     position: relative;
 } 
 
@@ -102,6 +102,7 @@ header {
    width: 90%;
    position: absolute;
    bottom: 0;
+   z-index: -1;
 }
 
 .search-txt {
@@ -153,6 +154,7 @@ header {
 .list {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .list li {
@@ -164,24 +166,64 @@ header {
     position: relative;
 } 
 .list li:hover {
+    background-color: #936e6e;
+
     .text-li {
-        color: rgb(8, 58, 28);
+        color: rgb(255 255 255);
     }
     .bg-img {
         -webkit-transform: rotate(25deg); 
           transform: rotate(25deg);
     }
 }
+.list ul {
+    background-color: #936e6e;
+    position: absolute;
+    left: 100%;
+    z-index: 3;
+    display: none;
+    padding: 6px 6px 12px 6px;
+}
+.list li:hover ul {
+    display: block;
+}
 
+.options li {
+    width: 179px;
+    max-height: 31px;
+    text-align: center;
+    margin: 0 auto;
+}
+.options a {
+    text-decoration: none;
+    font-size: 19px;
+    color: rgb(255 255 255);
+    line-height: 9px;
+    cursor: pointer;
+    position: relative;
+}
+.options a::before {
+    content: "";
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255 255 255);
+    transition: 0.5s;
+    transform: scaleX(0);
+}
+.options a:hover:before {
+    transform: scaleX(0.9);
+  }
 .bg-img {
     background-image: url(../img/33малины_логотип.png);
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    left: 5px;
-    top: 5px;
-    width: 50px;
-    height: 50px;
+    left: 0;
+    width: 48px;
+    height: 48px;
     -webkit-transition: all 1s ease;
           transition: all 1s ease;
 } 
@@ -189,8 +231,10 @@ header {
 .text-li {
     cursor: pointer;
     position: absolute;
-    left: 62px;
-    bottom: 3px;
+    left: 52px;
+    bottom: 10px;
+    color: rgb(27, 105, 57);
+    text-decoration: none;
 }
 
 .container-scroll {
@@ -207,7 +251,6 @@ header {
 }
 
 .categories-block h1 {
-    width: 30%;
     height: 30px;
     font-size: 22px;
     font-weight: 600;
@@ -381,7 +424,7 @@ header {
 
 .menu-bar {
     width: 289px;
-    margin: 41px 28px;
+    margin: 41px 8px;
 }
 
 .bar-conteiner {
@@ -399,7 +442,6 @@ header {
     border-radius: 34px;
     margin-bottom: 9px;
     font-weight: 400;
-    width: fit-content;
 }
 .menu-item a {
     text-decoration: none;
@@ -499,14 +541,10 @@ header {
         flex-wrap: wrap;
     }
     .time, .adress, .product {
-        width: 336px;
+        width: 303px;
         height: 35px;
         position: relative;
         margin-top: 7px;
-    }
-    .box-menu {
-        position: absolute;
-        left: 42px;
     }
     .icon-btn {
         position: absolute;
@@ -579,6 +617,7 @@ header {
   @media (min-width:560px) and (max-width: 990px) {
     header {
         min-height: 18%;
+        font-size: 23px;
     }
     .heading-menu {
         height: 100%;
@@ -586,14 +625,14 @@ header {
     .menu {
         height: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .time, .adress {
         height: 46px;
-        width: 299px;
-        margin: 0 5px;
+        width: 301px;
+        margin: 0 auto;
     }
     .icon-btn {
         width: 21px;
@@ -606,9 +645,10 @@ header {
     }
     .logo {
         height: 36px;
+        margin-left: 11px;
     }
     .search {
-        width: 100%;
+        width: 95%;
     }
     .mount {
         max-height: 75vh;
@@ -660,11 +700,11 @@ header {
     }
     .info-conteiner {
         padding-top: 0;
+        margin-left: 0;
         width: 219px;
     }
     .menu-bar {
-        width: 230px;
-        margin: 12px;
+        margin: 41px 0;
     }
     .menu-item {
         font-size: 18px;
@@ -673,7 +713,7 @@ header {
         white-space: nowrap;
     }
     .footer {
-        height: 10%;
+        min-height: 10%;
         width: 97%;
         padding: 5px;
     }
@@ -681,18 +721,22 @@ header {
         font-size: 17px;
     }
     .logo2 {
-        width: 13%;
+        min-width: 16%;
         flex-direction: column;
     }
     .logo_footer {
-        width: 100%;
+        max-width: 100%;
+        height: 100%
     }
     .tip_logo, .social {
         padding: 0;
+        min-width: 60%;
+        height: 45%;
+        margin: 0 auto;
     }
     .certificate, .corporate, .partner, .letter {
-        width: min-content;
         line-height: 16px;
+        margin: 7px;
     }
     
   }
@@ -700,14 +744,20 @@ header {
 
   @media  (min-width: 560px)
   and (max-width: 689px) {
+    .menu {
+        padding: 10px;
+        column-gap: 9px;
+    }
     .time, .adress {
-        height: 37px;
+        max-width: 285px;
+        font-size: 22px;
     }
     .logotip, .product {
         height: 43px;
     }
     .logo2 {
         margin-bottom: 37px;
+        height: 100%;
     }
     .container-scroll {
         width: 37%;
@@ -738,7 +788,7 @@ header {
         display: flex;
         justify-content: center;
         column-gap: 48px;
-        margin: 0 17px;
+        margin: 10px 17px;
     }
     .heading-menu.open .menu {
         display: flex;
@@ -773,7 +823,7 @@ header {
         display: block;
         margin: auto 0;
         position: fixed;
-        z-index: 3;
+        z-index: 5;
         top: 9px;
         right: 11px;
     }
@@ -838,6 +888,13 @@ header {
     .certificate, .corporate, .partner, .letter {
         display: none;
     }
+    .social {
+        width: 60%;
+    }
+    .tip_logo {
+        width: 100%;
+        height: 52%;
+    }
   }
 
 
@@ -848,31 +905,27 @@ header {
         display: none;
     }
     .footer {
-        height: 45%;
+        height: 60%;
         margin-bottom: 20px;
-    }
-    .logo2 {
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 90%;
     }
     .tip_logo {
         position: absolute;
-        width: 90%;
-        height: 53%;
+        max-width: 90%;
+        max-height: 58%;
     }
     .logo_footer {
-        width: 100%;
-        height: 100%;
+        width: 90%;
     }
     .social {
+        min-width: 50%;
         position: absolute;
         bottom: 0;
-        width: 100%;
-        height: 45%;
-        letter-spacing: 21px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
+    
     .icons {
         width: 45px;
     }
@@ -888,11 +941,12 @@ header {
     }
     .time, .adress, .logotip, .product {
         height: 36px;
+        max-width: 297px;
     }
     .icon-btn {
         width: 19px;
         height: 19px;
-        right: 24px;
+        right: 11px;
         bottom: 13px;
     }
     .search-txt {
@@ -944,16 +998,12 @@ header {
 
    @media (max-height: 599px) {
     header {
-        max-width: 100%;
-        max-height: 30%;
         margin: 0;
-    }
-    .heading-menu {
-        max-height: 100%;
-        max-width: 100%;
+        padding: 0;
     }
     .menu {
         height: 100%;
+        flex-direction: row;
         justify-content: space-between;
         row-gap: 6px;
         padding: 0 9px;
@@ -966,10 +1016,14 @@ header {
         width: 34px;
         height: 34px;
     }
-    .time, .adress, .logotip, .product {
-        max-height: 49px;
-        width: 259px;
+    .heading-menu.open .menu {
+        display: block;
     }
+    .time, .adress, .product, .logotip {
+        max-height: 49px;
+        max-width: 260px;
+    }
+    
     .icon-btn {
         width: 19px;
         height: 19px;
@@ -988,14 +1042,16 @@ header {
     }
     .mount {
         max-width: 85%;
-        height: 52%;
+        min-height: 52%;
     }
     .info-conteiner {
         width: 100%;
+        min-height: 100%;
         margin: 0;
         padding-top: 10px;
     }
     .bar-conteiner {
+        height: 95%;
         flex-direction: row;
         flex-wrap: wrap;
         row-gap: 8px;
@@ -1004,33 +1060,37 @@ header {
     }
     .menu-bar {
         width: 95%;
-        max-height: 100%;
+        height: 95%;
+        margin: 0;
     }
     .menu-item {
         font-size: 18px;
         max-height: 26px;
-        padding: 1px;
+        padding: 0;
         margin-bottom: 0;
     }
     .footer {
-        max-height: 45%;
+        min-height: 15%;
+        width: 100%;
     }
-
-    .footer a {
-        vertical-align: text-bottom;
+    .logo2 {
+        display: flex;
     }
-    .logo {
-        height: 100%;
+    .tip_logo {
+        height: 33%;
     }
     .social {
-        padding: 5px;
+        padding: 3px;
+        display: flex;
+        height: 65%;
     }
-    
+    .icons {
+        width: 30px;
+    }
     footer a {
         font-size: 16px;
     }
     .certificate, .corporate, .partner, .letter {
-        margin: 0 auto;
         line-height: 13px;
     }
 
@@ -1038,8 +1098,37 @@ header {
 
 
 @media (max-height: 320px) {
+    header, .mount, .certificate, 
+    .corporate, .partner, .letter,
+    .logotip {
+        display: none;
+    }
     .footer {
+        height: 60%;
+        margin-bottom: 17px;
+    }
+    .logo2 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+        width: 100%;
+        height: 100%;
+    }
+    .tip_logo {
+        max-width: 85%;
+        max-height: 53%;
+        display: flex;
+    }
+    .logo_footer {
+        width: 80%;
+        
+    }
+    .social {
+        width: 35%;
         height: 45%;
+    }
+    .icons {
+        width: 45px;
     }
 }
 

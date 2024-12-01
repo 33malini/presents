@@ -9,7 +9,7 @@ let box_menu = document.getElementById('boxtime'),
     el3 = document.querySelector('#el_3');
     field = document.querySelector('#field_delivery');
     dattimpicker = document.querySelector('#datetimepicker');
-    btndate = document.querySelector('#btn_date');
+    btnDate = document.querySelector('#btn_date');
     input = document.getElementById('#datetimepicker');
     menu_heading = document.querySelector('.heading-menu');
     btn_menu = document.querySelector('.menu-button');
@@ -22,13 +22,9 @@ btn_menu.onclick = () => {
       btn_image.src = './icons/free-icon-close-page-8487257.png';
   } 
   else {
-      btn_image.srs = './icons/free-icon-menu-4254068.png';
+      btn_image.src = './icons/free-icon-menu-4254068.png';
   }
-} 
-
-
-
-
+}
 
 
 box_menu.addEventListener('click', function() {
@@ -75,9 +71,11 @@ document.addEventListener('keydown', function(e) {
         Минимальная дата - текущая дата
         минимальное время - текущее время
         */
-        format:'d.m.Y',
+        format:'d.m.Y  H:i',
+        formatDate: 'd.m.Y',
+        formatTime: 'H:i',
         minDate:new Date(),
-        minTime:new Date(),
+        minTime: new Date(),
         maxTime: '21:30',
 
         onSelectDate:function(ct,$i){
@@ -99,13 +97,18 @@ document.addEventListener('keydown', function(e) {
         },
         onSelectTime:function(ct,$i) {
             console.log(ct.getHours());
-           
-            /* если выбрано время, 
-            */
-            
+             /*если  выбрано время,  
+           то format:'d.m.Y',
+           иначе format:'d.m.Y  H:i'*/
+            let minTime2 = ct
+                ? format:'d.m.Y  H:i';
+                this.setOptions({
+                  format : minTime2
+            }) 
+          
       },
-    });
-  });
+  })
+});
   
   $("#btn_date").click(function(){
     var str = $("#datetimepicker").val();
@@ -114,8 +117,7 @@ document.addEventListener('keydown', function(e) {
           : console.log('не получилось.');
   });
 
-  
-   
-  
+  let textLi = document.querySelector('.text-li');
+  textLi.addEventListener('click', function() {
 
-    
+  });
