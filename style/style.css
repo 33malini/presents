@@ -420,8 +420,24 @@ header {
     background-color: rgb(206 180 169);
     margin: 8px auto 49px auto;
     border-radius: 21px;
+    position: relative;
 }
-
+.btn-video {
+    width: 135px;
+    height: 69px;
+    background: #7c6b6b;
+    color: aliceblue;
+    border: 2px; 
+    border-radius: 16px;
+    text-align: center;
+    font-size: 19px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .menu-bar {
     width: 289px;
     margin: 41px 8px;

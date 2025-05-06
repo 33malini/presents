@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>33malini</title>
+      <link rel="stylesheet" href="../style/style.css">
+      <link rel="stylesheet" href="../style/modal.css">
+      <link rel="stylesheet" href="../style/bar.style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+  </head>
+        <body>
+              <header>
+                <div class="heading-menu ">
+                  <div class="menu">
+                    
+                    <div class="time">
+                      <h class="box-menu" id="boxtime">Выбрать дату доставки</h>
+                      <button type="button" name="popup-button" class="icon-btn">
+                        <div class="going-image"></div>
+                      </button>
+                    </div> 
+                    <div class="adress">
+                      <h class="box-menu" id="boxaddress">Указать адрес доставки</h>
+                      <button type="button" name="popup-button" class="icon-btn">
+                        <div class="going-image"></div>
+                      </button>
+                    </div>
+                    <div class="wmodal" id="">
+                      <div class="modal-overlay">
+                        <div class="modal-window">
+                          <div class="modal-header">
+                            <span class="modal-title">Выберите дату доставки</span>
+                            <span class="modal-close">&times;</span>
+                          </div>
+                          <div class="modal-body">
+                            <div class="header-after">
+                              <div class="header-after-left">Желаемое время доставки:</div>
+                              <div class="header-after-right">Часовой пояс: Иркутск</div>
+                            </div>
+                            <div role="radiogroup" id="radiogroup" class="yes_radio">
+                              <div class="time-variant">
+                                <label role="radio" class="el-radio radio medium">
+                                  <span class="el-radio_input" id="el_1">
+                                    <input type="radio" name="question" class="yes">
+                                  </span>
+                                  <span class="el-radio_label">Как можно скорее</span>
+                                </label>
+                              </div>
+                              <div class="time-variant">
+                                <label role="radio" class="el-radio radio medium">
+                                  <span class="el-radio_input" id="el_2">
+                                    <input type="radio" name="question" class="yes" id="timet">
+                                  </span>
+                                  <span class="el-radio_label">Ко времени</span>
+                                </label>
+                              </div>
+                              <div class="time-variant">
+                                <label role="radio" class="el-radio radio medium">
+                                  <span class="el-radio_input" id="el_3">
+                                    <input type="radio" name="question" class="yes" id="accuracy">
+                                  </span>
+                                  <span class="el-radio_label" >Узнаем у получателя</span>
+                                </label>
+                              </div>
+                            </div>
+                              <div class="form-group" id="field_delivery">
+                                <input id="datetimepicker" type="text" class="delivery" readonly="readonly" name="date"
+                                placeholder="Дата и время доставки">
+                              </div>
+                              
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn" id="btn_date">Сохранить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="logotip">
+                      <img src="../img/надпись.png" class="logo">
+                    </div>
+                    <div class="product">
+                    
+                    <div class="search">
+                      <input type="text" class="search-txt" name="name" placeholder="Поиск">
+                      <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                      </a>
+                    </div> 
+                    
+                    </div>    
+                  </div>
+                  <div class="menu-logo"></div>
+                  <button class="menu-button" id="btn-menu">
+                    <img class="btn-img" src="./icons/free-icon-menu-4254068.png" alt="menu button">
+                  </button>
+                </div>     
+            </header>
+            
+            <div class="container">
+              <div class="slide active" style="background-image: url('../categories.img/женские/photo_2019-06-29_11-18-31.jpg'); 
+              background-color: aquamarine;">
+                <h3>Зефирные розы</h3>
+              </div>
+              <div class="slide" style="background-image: url('../categories.img/женские/Screenshot_20190602-165005-01.jpeg');
+              background-color: aqua;">
+                <h3>Зефирные розы</h3>
+              </div>
+              <div class="slide" style="background-image: url('../categories.img/женские/photo-29_00-38-39.jpg');
+              background-color: azure;">
+                <h3>Зефирные розы</h3>
+              </div>
+              <div class="slide" style="background-image: url('../categories.img/женские/photo_2019-06-29_11-18-31.jpg'); 
+              background-color: aquamarine;">
+                <h3>Зефирные розы</h3>
+              </div>
+              <div class="slide" style="background-image: url('../categories.img/женские/Screenshot_20190602-165005-01.jpeg'); 
+              background-color: aquamarine;">
+                <h3>Зефирные розы</h3>
+              </div>
+            </div>
+              
+              <div class="footer">
+                <div class="logo2">
+                  <div class="tip_logo">
+                    <img src="../img/надпись.png" class="logo_footer">
+                  </div>
+                  <div class="social">
+                    <a href="https://t.me/olya_33malini" target="_blank">
+                      <img src="../icons/free-icon-telegram-2111646.png
+                      " alt="Телеграмм" class="icons" />
+                    </a>
+                    <a href="https://vk.com/33malini" target="_blank">
+                      <img src="../icons/vk.png" alt="ВКонтакте" class="icons" />
+                    </a>
+                  </div>
+                </div>
+                <div class="certificate">
+                  <a href="#" target="_blank">Подарочные сертификаты</a>
+                </div>
+                <div class="corporate">
+                  <a href="#" target="_blank">Корпоративным клиентам</a>
+                </div>
+                <div class="partner">
+                  <a href="#" target="_blank">Партнерская программа</a>
+                </div>
+                
+                <div class="letter">
+                  <a href="#" target="_blank">Обатная связь</a>
+                </div>
+              </div>  
+              <script src="script.js/JS.script.js"></script>
+              <script src="../script.js/bar.js"></script>
+          </body>
+          
+</html>

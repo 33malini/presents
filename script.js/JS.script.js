@@ -13,10 +13,12 @@ let box_menu = document.getElementById('boxtime'),
     input = document.getElementById('#datetimepicker');
     menu_heading = document.querySelector('.heading-menu');
     btn_menu = document.querySelector('.menu-button');
-    btn_image = document.querySelector('.btn-img')
+    btn_image = document.querySelector('.btn-img');
+    master = document.querySelector('.box-master');
+    btnVideo = document.querySelector('.btn-video');
+    bodyNode = document.getElementsByTagName('body')[0]
 
-
-
+//кнопка переключения меню, при клике меняется картинка
 btn_menu.onclick = () => {
   if (menu_heading.classList.toggle('open')) {
       btn_image.src = './icons/free-icon-close-page-8487257.png';
@@ -25,43 +27,38 @@ btn_menu.onclick = () => {
       btn_image.src = './icons/free-icon-menu-4254068.png';
   }
 }
-
-
 box_menu.addEventListener('click', function() {
     modal.style.display = 'block';
-});
-
+})
 icon.addEventListener('click', function() {
     modal.style.display = 'block';
 });
-
 clos.addEventListener('click', function() {
     modal.style.display = 'none';
 });
-
+//по клику в любом месте на затемнение модальное окно скрыть
 overlay.addEventListener('click', function() {
     modal.style.display = 'none';
     field.style.display = 'none';
 });
-
+//???
  modalWindow.addEventListener('click', function(e) {
     e.stopPropagation();
  });
-
+ //при нажатии esc модальное окно закрывается
 document.addEventListener('keydown', function(e) {
     if (e.key === "Escape") modal.style.display = 'none'
   });
+  //нажатии на радиоэлемент открывается форма 
   el1.addEventListener('click', function() {
     field.style.display = 'none';
   });
-
   el2.addEventListener('click', function() {
     field.style.display = 'block';
   });
   el3.addEventListener('click', function() {
     field.style.display = 'block';
   });
-
 
   $(document).ready(function(){
     $.datetimepicker.setLocale('ru');
@@ -116,8 +113,29 @@ document.addEventListener('keydown', function(e) {
           ?  console.log(str)
           : console.log('не получилось.');
   });
-
   let textLi = document.querySelector('.text-li');
   textLi.addEventListener('click', function() {
 
   });
+
+
+  // при клике на кнопку меняется цвет картинки и выводится счётчик количества кликов по кнопке.
+  let count = 0;
+  const btnText = 'Посмотреть видео';
+  btnVideo.addEventListener('click', (e) => {
+    e.stopPropagation();
+    master.style.background = 'red';
+    count++ ;
+    btnVideo.textContent = count;
+  });
+//если следующий клик случился не по кнопке, то счетчик обнуляется, цвет и текст кнопки возвращаются
+// в первоначальное состояние.
+  bodyNode.addEventListener('click', (e) => {
+    if(e.target !== btnVideo) { 
+      count = 0;
+      master.removeAttribute('style');
+      btnVideo.innerText = btnText;
+    }
+  })
+    
+  
