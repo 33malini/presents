@@ -74,7 +74,6 @@ document.addEventListener('keydown', function(e) {
         minDate:new Date(),
         minTime: new Date(),
         maxTime: '21:30',
-
         onSelectDate:function(ct,$i){
             console.log(ct.getDate());
             /*
